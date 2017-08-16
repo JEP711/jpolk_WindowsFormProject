@@ -21,5 +21,20 @@ namespace TextEditor
 		{
 			openFileDialog1.ShowDialog();
 		}
+
+		private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			saveFileDialog1.ShowDialog();
+		}
+
+		private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			fontDialog1.ShowDialog();
+		}
+
+		private void fontColorToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			colorDialog1.ShowDialog();
+		}
 	}
 }
