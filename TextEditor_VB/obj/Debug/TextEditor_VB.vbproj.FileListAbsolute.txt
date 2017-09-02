@@ -1,0 +1,11 @@
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\bin\Debug\TextEditor_VB.exe.config
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\bin\Debug\TextEditor_VB.exe
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\bin\Debug\TextEditor_VB.pdb
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\bin\Debug\TextEditor_VB.xml
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\obj\Debug\TextEditor_VB.vbprojResolveAssemblyReference.cache
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\obj\Debug\TextEditor_VB.Form1.resources
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\obj\Debug\TextEditor_VB.Resources.resources
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\obj\Debug\TextEditor_VB.vbproj.GenerateResource.Cache
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\obj\Debug\TextEditor_VB.exe
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\obj\Debug\TextEditor_VB.xml
+C:\Users\James E Polk\Documents\Visual Studio 2017\Projects\TextEditor\TextEditor_VB\obj\Debug\TextEditor_VB.pdb
