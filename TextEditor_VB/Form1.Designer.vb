@@ -34,6 +34,9 @@ Partial Class Form1
 		Me.WordWrapToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.DarkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.AutumnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.OceanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.rtbMainBody = New System.Windows.Forms.RichTextBox()
@@ -47,7 +50,7 @@ Partial Class Form1
 		Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.HelpToolStripMenuItem})
 		Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
 		Me.MenuStrip1.Name = "MenuStrip1"
-		Me.MenuStrip1.Size = New System.Drawing.Size(482, 28)
+		Me.MenuStrip1.Size = New System.Drawing.Size(453, 28)
 		Me.MenuStrip1.TabIndex = 0
 		Me.MenuStrip1.Text = "MenuStrip1"
 		'
@@ -103,6 +106,7 @@ Partial Class Form1
 		'
 		'WordWrapToolStripMenuItem
 		'
+		Me.WordWrapToolStripMenuItem.CheckOnClick = True
 		Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
 		Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(198, 26)
 		Me.WordWrapToolStripMenuItem.Text = "Word Wrap"
@@ -116,9 +120,31 @@ Partial Class Form1
 		'
 		'ThemeToolStripMenuItem
 		'
+		Me.ThemeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DarkToolStripMenuItem, Me.AutumnToolStripMenuItem, Me.OceanToolStripMenuItem})
 		Me.ThemeToolStripMenuItem.Name = "ThemeToolStripMenuItem"
-		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(129, 26)
+		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
 		Me.ThemeToolStripMenuItem.Text = "Theme"
+		'
+		'DarkToolStripMenuItem
+		'
+		Me.DarkToolStripMenuItem.CheckOnClick = True
+		Me.DarkToolStripMenuItem.Name = "DarkToolStripMenuItem"
+		Me.DarkToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.DarkToolStripMenuItem.Text = "Dark"
+		'
+		'AutumnToolStripMenuItem
+		'
+		Me.AutumnToolStripMenuItem.CheckOnClick = True
+		Me.AutumnToolStripMenuItem.Name = "AutumnToolStripMenuItem"
+		Me.AutumnToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.AutumnToolStripMenuItem.Text = "Autumn"
+		'
+		'OceanToolStripMenuItem
+		'
+		Me.OceanToolStripMenuItem.CheckOnClick = True
+		Me.OceanToolStripMenuItem.Name = "OceanToolStripMenuItem"
+		Me.OceanToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.OceanToolStripMenuItem.Text = "Ocean"
 		'
 		'HelpToolStripMenuItem
 		'
@@ -130,7 +156,7 @@ Partial Class Form1
 		'AboutToolStripMenuItem
 		'
 		Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-		Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
+		Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
 		Me.AboutToolStripMenuItem.Text = "About"
 		'
 		'rtbMainBody
@@ -139,9 +165,11 @@ Partial Class Form1
 		Me.rtbMainBody.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.rtbMainBody.BackColor = System.Drawing.SystemColors.Window
+		Me.rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
 		Me.rtbMainBody.Location = New System.Drawing.Point(12, 28)
 		Me.rtbMainBody.Name = "rtbMainBody"
-		Me.rtbMainBody.Size = New System.Drawing.Size(458, 383)
+		Me.rtbMainBody.Size = New System.Drawing.Size(429, 340)
 		Me.rtbMainBody.TabIndex = 1
 		Me.rtbMainBody.Text = ""
 		'
@@ -151,7 +179,7 @@ Partial Class Form1
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
 		Me.BackColor = System.Drawing.SystemColors.Control
-		Me.ClientSize = New System.Drawing.Size(482, 423)
+		Me.ClientSize = New System.Drawing.Size(453, 380)
 		Me.Controls.Add(Me.rtbMainBody)
 		Me.Controls.Add(Me.MenuStrip1)
 		Me.ForeColor = System.Drawing.SystemColors.ControlText
@@ -180,4 +208,7 @@ Partial Class Form1
 	Friend WithEvents ThemeToolStripMenuItem As ToolStripMenuItem
 	Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 	Friend WithEvents rtbMainBody As RichTextBox
+	Friend WithEvents DarkToolStripMenuItem As ToolStripMenuItem
+	Friend WithEvents AutumnToolStripMenuItem As ToolStripMenuItem
+	Friend WithEvents OceanToolStripMenuItem As ToolStripMenuItem
 End Class
