@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
 	Inherits System.Windows.Forms.Form
 
 	'Form overrides dispose to clean up the component list.
-	<System.Diagnostics.DebuggerNonUserCode()> _
+	<System.Diagnostics.DebuggerNonUserCode()>
 	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 		Try
 			If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
 	'NOTE: The following procedure is required by the Windows Form Designer
 	'It can be modified using the Windows Form Designer.  
 	'Do not modify it using the code editor.
-	<System.Diagnostics.DebuggerStepThrough()> _
+	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
 		Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,12 +40,17 @@ Partial Class Form1
 		Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.rtbMainBody = New System.Windows.Forms.RichTextBox()
+		Me.FontDialog1 = New System.Windows.Forms.FontDialog()
+		Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+		Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+		Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
 		Me.MenuStrip1.SuspendLayout()
 		Me.SuspendLayout()
 		'
 		'MenuStrip1
 		'
 		Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
+		Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
 		Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
 		Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.HelpToolStripMenuItem})
 		Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -64,19 +69,19 @@ Partial Class Form1
 		'OpenToolStripMenuItem
 		'
 		Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-		Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
+		Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
 		Me.OpenToolStripMenuItem.Text = "Open"
 		'
 		'SaveToolStripMenuItem
 		'
 		Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-		Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
+		Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
 		Me.SaveToolStripMenuItem.Text = "Save"
 		'
 		'SaveAsToolStripMenuItem
 		'
 		Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-		Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
+		Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
 		Me.SaveAsToolStripMenuItem.Text = "Save as"
 		'
 		'EditToolStripMenuItem
@@ -106,7 +111,9 @@ Partial Class Form1
 		'
 		'WordWrapToolStripMenuItem
 		'
+		Me.WordWrapToolStripMenuItem.Checked = True
 		Me.WordWrapToolStripMenuItem.CheckOnClick = True
+		Me.WordWrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
 		Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
 		Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(198, 26)
 		Me.WordWrapToolStripMenuItem.Text = "Word Wrap"
@@ -122,28 +129,28 @@ Partial Class Form1
 		'
 		Me.ThemeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DarkToolStripMenuItem, Me.AutumnToolStripMenuItem, Me.OceanToolStripMenuItem})
 		Me.ThemeToolStripMenuItem.Name = "ThemeToolStripMenuItem"
-		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(129, 26)
 		Me.ThemeToolStripMenuItem.Text = "Theme"
 		'
 		'DarkToolStripMenuItem
 		'
 		Me.DarkToolStripMenuItem.CheckOnClick = True
 		Me.DarkToolStripMenuItem.Name = "DarkToolStripMenuItem"
-		Me.DarkToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.DarkToolStripMenuItem.Size = New System.Drawing.Size(136, 26)
 		Me.DarkToolStripMenuItem.Text = "Dark"
 		'
 		'AutumnToolStripMenuItem
 		'
 		Me.AutumnToolStripMenuItem.CheckOnClick = True
 		Me.AutumnToolStripMenuItem.Name = "AutumnToolStripMenuItem"
-		Me.AutumnToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.AutumnToolStripMenuItem.Size = New System.Drawing.Size(136, 26)
 		Me.AutumnToolStripMenuItem.Text = "Autumn"
 		'
 		'OceanToolStripMenuItem
 		'
 		Me.OceanToolStripMenuItem.CheckOnClick = True
 		Me.OceanToolStripMenuItem.Name = "OceanToolStripMenuItem"
-		Me.OceanToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.OceanToolStripMenuItem.Size = New System.Drawing.Size(136, 26)
 		Me.OceanToolStripMenuItem.Text = "Ocean"
 		'
 		'HelpToolStripMenuItem
@@ -156,7 +163,7 @@ Partial Class Form1
 		'AboutToolStripMenuItem
 		'
 		Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-		Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
 		Me.AboutToolStripMenuItem.Text = "About"
 		'
 		'rtbMainBody
@@ -172,6 +179,14 @@ Partial Class Form1
 		Me.rtbMainBody.Size = New System.Drawing.Size(429, 340)
 		Me.rtbMainBody.TabIndex = 1
 		Me.rtbMainBody.Text = ""
+		'
+		'OpenFileDialog1
+		'
+		Me.OpenFileDialog1.DefaultExt = "txt"
+		Me.OpenFileDialog1.FileName = ".txt"
+		Me.OpenFileDialog1.Filter = """Text files |*.txt|All files|*.*"""
+		Me.OpenFileDialog1.InitialDirectory = "C:"
+		Me.OpenFileDialog1.RestoreDirectory = True
 		'
 		'Form1
 		'
@@ -211,4 +226,8 @@ Partial Class Form1
 	Friend WithEvents DarkToolStripMenuItem As ToolStripMenuItem
 	Friend WithEvents AutumnToolStripMenuItem As ToolStripMenuItem
 	Friend WithEvents OceanToolStripMenuItem As ToolStripMenuItem
+	Friend WithEvents FontDialog1 As FontDialog
+	Friend WithEvents OpenFileDialog1 As OpenFileDialog
+	Friend WithEvents SaveFileDialog1 As SaveFileDialog
+	Friend WithEvents ColorDialog1 As ColorDialog
 End Class
