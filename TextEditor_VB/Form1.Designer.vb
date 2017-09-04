@@ -55,7 +55,7 @@ Partial Class Form1
 		Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.HelpToolStripMenuItem})
 		Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
 		Me.MenuStrip1.Name = "MenuStrip1"
-		Me.MenuStrip1.Size = New System.Drawing.Size(453, 28)
+		Me.MenuStrip1.Size = New System.Drawing.Size(693, 28)
 		Me.MenuStrip1.TabIndex = 0
 		Me.MenuStrip1.Text = "MenuStrip1"
 		'
@@ -69,19 +69,19 @@ Partial Class Form1
 		'OpenToolStripMenuItem
 		'
 		Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-		Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
 		Me.OpenToolStripMenuItem.Text = "Open"
 		'
 		'SaveToolStripMenuItem
 		'
 		Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-		Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
 		Me.SaveToolStripMenuItem.Text = "Save"
 		'
 		'SaveAsToolStripMenuItem
 		'
 		Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-		Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
 		Me.SaveAsToolStripMenuItem.Text = "Save as"
 		'
 		'EditToolStripMenuItem
@@ -176,7 +176,7 @@ Partial Class Form1
 		Me.rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
 		Me.rtbMainBody.Location = New System.Drawing.Point(12, 28)
 		Me.rtbMainBody.Name = "rtbMainBody"
-		Me.rtbMainBody.Size = New System.Drawing.Size(429, 340)
+		Me.rtbMainBody.Size = New System.Drawing.Size(669, 559)
 		Me.rtbMainBody.TabIndex = 1
 		Me.rtbMainBody.Text = ""
 		'
@@ -194,13 +194,13 @@ Partial Class Form1
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
 		Me.BackColor = System.Drawing.SystemColors.Control
-		Me.ClientSize = New System.Drawing.Size(453, 380)
+		Me.ClientSize = New System.Drawing.Size(693, 599)
 		Me.Controls.Add(Me.rtbMainBody)
 		Me.Controls.Add(Me.MenuStrip1)
 		Me.ForeColor = System.Drawing.SystemColors.ControlText
 		Me.MainMenuStrip = Me.MenuStrip1
 		Me.Name = "Form1"
-		Me.Text = "Form1"
+		Me.Text = "Text Editor"
 		Me.MenuStrip1.ResumeLayout(False)
 		Me.MenuStrip1.PerformLayout()
 		Me.ResumeLayout(False)
