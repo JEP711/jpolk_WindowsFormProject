@@ -129,7 +129,7 @@ Partial Class Form1
 		'
 		Me.ThemeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DarkToolStripMenuItem, Me.AutumnToolStripMenuItem, Me.OceanToolStripMenuItem})
 		Me.ThemeToolStripMenuItem.Name = "ThemeToolStripMenuItem"
-		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(129, 26)
 		Me.ThemeToolStripMenuItem.Text = "Theme"
 		'
 		'DarkToolStripMenuItem
@@ -173,6 +173,7 @@ Partial Class Form1
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.rtbMainBody.BackColor = System.Drawing.SystemColors.Window
+		Me.rtbMainBody.Font = New System.Drawing.Font("Palatino Linotype", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
 		Me.rtbMainBody.Location = New System.Drawing.Point(12, 28)
 		Me.rtbMainBody.Name = "rtbMainBody"
@@ -180,12 +181,16 @@ Partial Class Form1
 		Me.rtbMainBody.TabIndex = 1
 		Me.rtbMainBody.Text = ""
 		'
+		'FontDialog1
+		'
+		Me.FontDialog1.Font = New System.Drawing.Font("Palatino Linotype", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		'
 		'OpenFileDialog1
 		'
 		Me.OpenFileDialog1.DefaultExt = "txt"
 		Me.OpenFileDialog1.FileName = ".txt"
 		Me.OpenFileDialog1.Filter = """Text files |*.txt|All files|*.*"""
-		Me.OpenFileDialog1.InitialDirectory = "C:"
+		Me.OpenFileDialog1.InitialDirectory = "Desktop"
 		Me.OpenFileDialog1.RestoreDirectory = True
 		'
 		'Form1

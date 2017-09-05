@@ -127,19 +127,18 @@ Public Class Form1
 	End Sub
 
 	Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
-		Dim UserFile = OpenFileDialog1.FileName                     'Code Based of example done in class
-		Dim UserFileRead = New StreamReader(UserFile)
+		With OpenFileDialog1                'Code based off example in book
+			.Title = "Open File"
+			.Filter = "Text Files | *.txt"
+			.FileName = ""
+			.CheckFileExists = vbTrue
+		End With
 
-		If OpenFileDialog1.ShowDialog = DialogResult.OK Then        'checkstate implemented as part of defensive
-			OpenToolStripMenuItem.CheckState = CheckState.Checked   'code for Save function
-			Me.Text = OpenFileDialog1.SafeFileName  'changes title for form
+		If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+			rtbMainBody.LoadFile(OpenFileDialog1.FileName, RichTextBoxStreamType.PlainText)
+			OpenToolStripMenuItem.CheckState = CheckState.Checked 'checkstate added as defensive coding for
+			Me.Text = OpenFileDialog1.SafeFileName                  'Save as function
 		End If
-
-		While Not UserFileRead.EndOfStream
-			rtbMainBody.Text += UserFileRead.ReadLine
-		End While
-
-		UserFileRead.Close()
 	End Sub
 
 	Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
@@ -207,11 +206,10 @@ Public Class Form1
 		Dim ReplaceKeyWord As String
 		RMessage = "Type Keyword for Replace below:"
 		ReplaceInput = ""
-		If FindKeyword IsNot "" Then
-			ReplaceKeyWord = InputBox(RMessage, Title, ReplaceInput, 400, 150)
-		End If
 
-		If ReplaceKeyWord IsNot "" Then
+		ReplaceKeyWord = InputBox(RMessage, Title, ReplaceInput, 400, 150)
+
+		If ReplaceKeyWord & FindKeyword IsNot "" Then
 			Dim FWordLength = FindKeyword.Length
 			Dim RWordLength = ReplaceKeyWord.Length
 			Dim FPosition = rtbMainBody.Find(FindKeyword, 0, RichTextBoxFinds.WholeWord)
