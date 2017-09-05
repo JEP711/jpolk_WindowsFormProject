@@ -181,22 +181,48 @@ Public Class Form1
 	Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
 		Dim Message, Title, UserInput As String 'Variables needed for Input Box
 		Dim FindKeyword As String
-		Message = "Type Keyword to Search below:"
+		Message = "Type Keyword for Search below:"
 		Title = "Find"
 		UserInput = ""
 
 		FindKeyword = InputBox(Message, Title, UserInput, 400, 150) 'Stores user input
 
-		If FindKeyword IsNot "" Then
+		If FindKeyword IsNot "" Then 'Finds Keyword and selects it if present
 			Dim WordLength = FindKeyword.Length
 			Dim Position = rtbMainBody.Find(FindKeyword, 0, RichTextBoxFinds.WholeWord)
-			While Position >= 0 'Finds user input in textbox and selects the last occurences of it while 
-				rtbMainBody.Select(Position, WordLength)    'highlighting all instances
-				rtbMainBody.SelectionBackColor = Color.LightPink
-				Position = rtbMainBody.Find(FindKeyword, Position + WordLength, RichTextBoxFinds.WholeWord)
-			End While
+			rtbMainBody.Select(Position, WordLength)
 		End If
 	End Sub
 
+	Private Sub FindAndReplaceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindAndReplaceToolStripMenuItem.Click
+		Dim FMessage, Title, FindInput As String
+		Dim FindKeyword As String
+		FMessage = "Type Keyword for Search below:"
+		Title = "Find and Replace"
+		FindInput = ""
 
+		FindKeyword = InputBox(FMessage, Title, FindInput, 400, 150)
+
+		Dim RMessage, ReplaceInput As String
+		Dim ReplaceKeyWord As String
+		RMessage = "Type Keyword for Replace below:"
+		ReplaceInput = ""
+		If FindKeyword IsNot "" Then
+			ReplaceKeyWord = InputBox(RMessage, Title, ReplaceInput, 400, 150)
+		End If
+
+		If ReplaceKeyWord IsNot "" Then
+			Dim FWordLength = FindKeyword.Length
+			Dim RWordLength = ReplaceKeyWord.Length
+			Dim FPosition = rtbMainBody.Find(FindKeyword, 0, RichTextBoxFinds.WholeWord)
+			Dim RPosition = rtbMainBody.Find(ReplaceKeyWord, 0, RichTextBoxFinds.WholeWord)
+
+			While FPosition >= 0
+				rtbMainBody.Select(FPosition, FWordLength)
+				rtbMainBody.SelectionLength = RWordLength
+				rtbMainBody.SelectedText = ReplaceKeyWord
+				FPosition = rtbMainBody.Find(FindKeyword, FPosition + RWordLength, RichTextBoxFinds.WholeWord)
+			End While
+		End If
+	End Sub
 End Class

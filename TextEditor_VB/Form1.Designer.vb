@@ -129,7 +129,7 @@ Partial Class Form1
 		'
 		Me.ThemeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DarkToolStripMenuItem, Me.AutumnToolStripMenuItem, Me.OceanToolStripMenuItem})
 		Me.ThemeToolStripMenuItem.Name = "ThemeToolStripMenuItem"
-		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(129, 26)
+		Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
 		Me.ThemeToolStripMenuItem.Text = "Theme"
 		'
 		'DarkToolStripMenuItem
