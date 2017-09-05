@@ -179,6 +179,7 @@ Partial Class Form1
 		Me.rtbMainBody.Name = "rtbMainBody"
 		Me.rtbMainBody.Size = New System.Drawing.Size(669, 559)
 		Me.rtbMainBody.TabIndex = 1
+		Me.rtbMainBody.TabStop = False
 		Me.rtbMainBody.Text = ""
 		'
 		'FontDialog1
