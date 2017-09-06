@@ -190,7 +190,7 @@ Public Class Form1
 			Dim WordLength = FindKeyword.Length
 			Dim Position = rtbMainBody.Find(FindKeyword, 0, RichTextBoxFinds.WholeWord)
 			Try
-				rtbMainBody.Select(Position, WordLength) 'If keyword is not present in in txtbox, Position is 
+				rtbMainBody.Select(Position, WordLength)  'If keyword is not present in in txtbox, Position is
 			Catch ex As Exception                           'assigned a negative value and breaks code
 				MessageBox.Show("Search Target not present in document")    'Could be handled with If statement as well
 			End Try
@@ -220,9 +220,13 @@ Public Class Form1
 
 			While FPosition >= 0
 				If RWordLength > FWordLength Then
-					rtbMainBody.Select(FPosition, FWordLength)
-					rtbMainBody.SelectionLength = RWordLength
-					rtbMainBody.SelectedText = ReplaceKeyWord
+					rtbMainBody.Text = rtbMainBody.Text.Remove(FPosition, FWordLength)
+					rtbMainBody.Text = rtbMainBody.Text.Insert(FPosition, ReplaceKeyWord)
+				ElseIf FindKeyword.Equals(ReplaceKeyWord) Then
+					MessageBox.Show("Find Keyword and Replace Keyword" & vbNewLine &
+									"             are the same word..." & vbNewLine &
+									"                      (-____-)")
+					Exit While
 				Else
 					rtbMainBody.Select(FPosition, FWordLength)
 					rtbMainBody.SelectedText = ReplaceKeyWord
