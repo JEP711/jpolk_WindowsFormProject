@@ -2,36 +2,21 @@
 Public Class Form1
 	Private Sub MidnightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DarkToolStripMenuItem.Click
 		If DarkToolStripMenuItem.CheckState = CheckState.Checked Then 'Dark Theme
-			MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+			MenuStrip1.BackColor = System.Drawing.SystemColors.Desktop
 			MenuStrip1.ForeColor = System.Drawing.Color.WhiteSmoke
-			Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-			rtbMainBody.BackColor = System.Drawing.SystemColors.MenuText
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.HighlightText
+			Me.BackColor = System.Drawing.SystemColors.Desktop
+			rtbMainBody.BackColor = System.Drawing.Color.LightGray
 		End If
+
 		If DarkToolStripMenuItem.CheckState = CheckState.Unchecked Then 'Revert to standard
 			MenuStrip1.BackColor = System.Drawing.SystemColors.Control
 			MenuStrip1.ForeColor = System.Drawing.SystemColors.MenuText
 			Me.BackColor = System.Drawing.SystemColors.Control
 			rtbMainBody.BackColor = System.Drawing.SystemColors.Window
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
 		End If
 
-		If AutumnToolStripMenuItem.CheckState = CheckState.Checked Then 'Defensive Code that does not allow theme
-			DarkToolStripMenuItem.CheckState = CheckState.Unchecked     'to be changed if Dark theme is selected
-			MenuStrip1.BackColor = System.Drawing.Color.Maroon
-			MenuStrip1.ForeColor = System.Drawing.Color.Orange
-			Me.BackColor = System.Drawing.Color.Maroon
-			rtbMainBody.BackColor = System.Drawing.Color.Khaki
-			rtbMainBody.ForeColor = System.Drawing.Color.SaddleBrown
-		End If
-		If OceanToolStripMenuItem.CheckState = CheckState.Checked Then
-			DarkToolStripMenuItem.CheckState = CheckState.Unchecked
-			MenuStrip1.BackColor = System.Drawing.Color.MidnightBlue
-			MenuStrip1.ForeColor = System.Drawing.Color.LemonChiffon
-			Me.BackColor = System.Drawing.Color.MidnightBlue
-			rtbMainBody.BackColor = System.Drawing.Color.PaleTurquoise
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
-		End If
+		AutumnToolStripMenuItem.CheckState = CheckState.Unchecked
+		OceanToolStripMenuItem.CheckState = CheckState.Unchecked
 	End Sub
 
 	Private Sub AutumnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AutumnToolStripMenuItem.Click
@@ -40,32 +25,19 @@ Public Class Form1
 			MenuStrip1.ForeColor = System.Drawing.Color.Orange
 			Me.BackColor = System.Drawing.Color.Maroon
 			rtbMainBody.BackColor = System.Drawing.Color.Khaki
-			rtbMainBody.ForeColor = System.Drawing.Color.SaddleBrown
+
 		End If
+
 		If AutumnToolStripMenuItem.CheckState = CheckState.Unchecked Then
 			MenuStrip1.BackColor = System.Drawing.SystemColors.Control
 			MenuStrip1.ForeColor = System.Drawing.SystemColors.MenuText
 			Me.BackColor = System.Drawing.SystemColors.Control
 			rtbMainBody.BackColor = System.Drawing.SystemColors.Window
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
+
 		End If
 
-		If DarkToolStripMenuItem.CheckState = CheckState.Checked Then   'Defensive code block
-			AutumnToolStripMenuItem.CheckState = CheckState.Unchecked
-			MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-			MenuStrip1.ForeColor = System.Drawing.Color.WhiteSmoke
-			Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-			rtbMainBody.BackColor = System.Drawing.SystemColors.MenuText
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.HighlightText
-		End If
-		If OceanToolStripMenuItem.CheckState = CheckState.Checked Then
-			AutumnToolStripMenuItem.CheckState = CheckState.Unchecked
-			MenuStrip1.BackColor = System.Drawing.Color.MidnightBlue
-			MenuStrip1.ForeColor = System.Drawing.Color.LemonChiffon
-			Me.BackColor = System.Drawing.Color.MidnightBlue
-			rtbMainBody.BackColor = System.Drawing.Color.PaleTurquoise
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
-		End If
+		DarkToolStripMenuItem.CheckState = CheckState.Unchecked
+		OceanToolStripMenuItem.CheckState = CheckState.Unchecked
 	End Sub
 
 	Private Sub OceanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OceanToolStripMenuItem.Click
@@ -74,32 +46,19 @@ Public Class Form1
 			MenuStrip1.ForeColor = System.Drawing.Color.LemonChiffon
 			Me.BackColor = System.Drawing.Color.MidnightBlue
 			rtbMainBody.BackColor = System.Drawing.Color.PaleTurquoise
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
+
 		End If
+
 		If OceanToolStripMenuItem.CheckState = CheckState.Unchecked Then
 			MenuStrip1.BackColor = System.Drawing.SystemColors.Control
 			MenuStrip1.ForeColor = System.Drawing.SystemColors.MenuText
 			Me.BackColor = System.Drawing.SystemColors.Control
 			rtbMainBody.BackColor = System.Drawing.SystemColors.Window
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.MenuText
+
 		End If
 
-		If DarkToolStripMenuItem.CheckState = CheckState.Checked Then   'Defensive Code Block
-			OceanToolStripMenuItem.CheckState = CheckState.Unchecked
-			MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-			MenuStrip1.ForeColor = System.Drawing.Color.WhiteSmoke
-			Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-			rtbMainBody.BackColor = System.Drawing.SystemColors.MenuText
-			rtbMainBody.ForeColor = System.Drawing.SystemColors.HighlightText
-		End If
-		If AutumnToolStripMenuItem.CheckState = CheckState.Checked Then
-			OceanToolStripMenuItem.CheckState = CheckState.Unchecked
-			MenuStrip1.BackColor = System.Drawing.Color.Maroon
-			MenuStrip1.ForeColor = System.Drawing.Color.Orange
-			Me.BackColor = System.Drawing.Color.Maroon
-			rtbMainBody.BackColor = System.Drawing.Color.Khaki
-			rtbMainBody.ForeColor = System.Drawing.Color.SaddleBrown
-		End If
+		DarkToolStripMenuItem.CheckState = CheckState.Unchecked
+		AutumnToolStripMenuItem.CheckState = CheckState.Unchecked
 	End Sub
 
 	Private Sub WordWrapToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.Click
