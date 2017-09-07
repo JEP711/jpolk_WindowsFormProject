@@ -25,7 +25,6 @@ Public Class Form1
 			MenuStrip1.ForeColor = System.Drawing.Color.Orange
 			Me.BackColor = System.Drawing.Color.Maroon
 			rtbMainBody.BackColor = System.Drawing.Color.Khaki
-
 		End If
 
 		If AutumnToolStripMenuItem.CheckState = CheckState.Unchecked Then
@@ -33,7 +32,6 @@ Public Class Form1
 			MenuStrip1.ForeColor = System.Drawing.SystemColors.MenuText
 			Me.BackColor = System.Drawing.SystemColors.Control
 			rtbMainBody.BackColor = System.Drawing.SystemColors.Window
-
 		End If
 
 		DarkToolStripMenuItem.CheckState = CheckState.Unchecked
@@ -46,7 +44,6 @@ Public Class Form1
 			MenuStrip1.ForeColor = System.Drawing.Color.LemonChiffon
 			Me.BackColor = System.Drawing.Color.MidnightBlue
 			rtbMainBody.BackColor = System.Drawing.Color.PaleTurquoise
-
 		End If
 
 		If OceanToolStripMenuItem.CheckState = CheckState.Unchecked Then
@@ -54,7 +51,6 @@ Public Class Form1
 			MenuStrip1.ForeColor = System.Drawing.SystemColors.MenuText
 			Me.BackColor = System.Drawing.SystemColors.Control
 			rtbMainBody.BackColor = System.Drawing.SystemColors.Window
-
 		End If
 
 		DarkToolStripMenuItem.CheckState = CheckState.Unchecked
